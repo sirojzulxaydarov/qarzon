@@ -31,6 +31,6 @@
 
 ### 1. Clone qilish (application.properties da PostgreSQL Configni sozlab oling)
 ```bash
-git clone https://github.com/your-username/qarzon.git
+git clone https://github.com/sirojzulxaydarov/qarzon.git
 cd qarzon
 
