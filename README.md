@@ -30,7 +30,26 @@
 ## 🚀 Loyihani ishga tushirish
 
 ### 1. Clone qilish (application.properties da PostgreSQL Configni sozlab oling)
+
 ```bash
 git clone https://github.com/sirojzulxaydarov/qarzon.git
 cd qarzon
+```
 
+### 2. PostgreSQL’da database yaratish
+
+```sql
+CREATE DATABASE qarzon;
+```
+
+### 3. `application.properties` faylida username va passwordingizni to'g'irlab oling
+
+### 4. Loyihani ishga tushurish
+
+```bash
+./mvnw spring-boot:run
+```
+
+### 5. Swagger orqali API’larni ishlatish
+
+http://localhost:8080/swagger-ui/index.html
