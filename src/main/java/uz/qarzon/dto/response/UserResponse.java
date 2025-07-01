@@ -1,16 +1,14 @@
-package uz.qarzon.dto;
+package uz.qarzon.dto.response;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import uz.qarzon.entity.enums.Role;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserDTO {
+public class UserResponse {
 
     private Integer id;
     private String firstName;

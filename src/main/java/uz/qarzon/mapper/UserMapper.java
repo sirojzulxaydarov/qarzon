@@ -1,34 +1,31 @@
 package uz.qarzon.mapper;
 
-import uz.qarzon.dto.UserDTO;
+import uz.qarzon.dto.request.UserRequest;
+import uz.qarzon.dto.response.UserResponse;
 import uz.qarzon.entity.User;
+import uz.qarzon.entity.enums.Role;
 
 public class UserMapper {
 
-    public static UserDTO toDTO(User user) {
-        return UserDTO.builder()
+    public static UserResponse toResponse(User user) {
+        return UserResponse.builder()
                 .id(user.getId())
                 .firstName(user.getFirstName())
                 .lastName(user.getLastName())
                 .username(user.getUsername())
                 .phoneNumber(user.getPhoneNumber())
                 .role(user.getRole())
-                .username(user.getUsername())
                 .build();
     }
 
-    public static User toEntity(UserDTO dto, String password) {
+    public static User toEntity(UserRequest userRequest, String encodedPassword) {
         return User.builder()
-                .id(dto.getId())
-                .firstName(dto.getFirstName())
-                .lastName(dto.getLastName())
-                .username(dto.getUsername())
-                .phoneNumber(dto.getPhoneNumber())
-                .password(password)
-                .role(dto.getRole())
+                .firstName(userRequest.getFirstName())
+                .lastName(userRequest.getLastName())
+                .username(userRequest.getUsername())
+                .phoneNumber(userRequest.getPhoneNumber())
+                .password(encodedPassword)
                 .build();
-
     }
-
 
 }
